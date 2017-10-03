@@ -1,0 +1,33 @@
+- name: Get current SNMP configuration
+  ios_command:
+    port: "{{ port }}"
+    commands: "show running | inc snmp-server community"
+  register: snmp_before
+
+- name: Remove existing SNMP configuration
+  when: "{{ item != '' }}"
+  ios_config:
+    port: "{{ port }}"
+    lines: "no {{ item }}"
+  with_items: "{{ snmp_before.stdout_lines[0] }}"
+
+- name: Configure SNMP ACL
+  ios_config:
+    port: "{{ port }}"
+    lines:
+      - permit 10.1.2.0 0.0.0.255
+      - permit 10.2.2.0 0.0.0.255
+    parents: ip access-list standard snmp-acl
+    before: no ip access-list standard snmp-acl
+    match: exact
+
+- name: Configure SNMP
+  ios_config:
+    port: "{{ port }}"
+    lines:
+      - snmp-server community sdfd RO snmp-acl
+      - snmp-server enable traps snmp linkdown linkup
+      - snmp-server host 172.29.52.12 version 2c public
+    before: default snmp-server
+    match: exact
+    replace: block

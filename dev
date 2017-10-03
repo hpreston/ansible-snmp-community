@@ -1,0 +1,2 @@
+[all]
+dev-csr1 port=2201 ansible_host=127.0.0.1 ansible_ssh_common_args='-o StrictHostKeyChecking=no'
