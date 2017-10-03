@@ -1,2 +1,0 @@
-[all]
-prod-csr1 port=2202 ansible_host=127.0.0.1
