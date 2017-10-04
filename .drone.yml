@@ -1,0 +1,7 @@
+deploy:
+    ansible:
+        image: rics3n/drone-ansible
+        inventory: test
+        playbook: main.yml
+        when:
+            branch: master
