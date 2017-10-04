@@ -1,2 +1,2 @@
-ansible
-pysnmp
+ansible==2.4.0.0
+pysnmp==4.3.9
