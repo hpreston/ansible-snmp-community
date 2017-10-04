@@ -3,6 +3,5 @@
   gather_facts: no
   vars_files:
     - snmp.yml
-    - credentials.yml
   roles:
     - common
