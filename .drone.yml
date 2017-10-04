@@ -1,12 +1,7 @@
-build:
-    build_starting:
-        image: python:2
-        commands:
-            - echo "Beginning new build"
-
 test:
-    run_tests:
-        image: python:2-onbuild
-        commands:
-            - ansible-playbook -i inventory main.yml
-
+    ansible:
+        image: rics3n/drone-ansible
+        inventory: test
+        playbook: main.yml
+        when:
+            branch: master
