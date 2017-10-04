@@ -10,7 +10,7 @@ class SnmpTest(unittest.TestCase):
 
         iterator = getCmd(SnmpEngine(),
                           CommunityData('r3@d0nly'),
-                          UdpTransportTarget(('127.0.0.1', 1161)),
+                          UdpTransportTarget(('127.0.0.1', 161)),
                           ContextData(),
                           ObjectType(ObjectIdentity('SNMPv2-MIB', 'sysName', 0)))
 

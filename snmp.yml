@@ -1,2 +1,2 @@
-snmp_read_only: r3@d0nly
-snmp_read_write: h@v3fun
+snmp_read_only: newone
+snmp_read_write: newwrite
