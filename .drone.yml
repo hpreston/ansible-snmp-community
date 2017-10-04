@@ -12,3 +12,5 @@ build:
           - pip install -r requirements.txt
           - echo $ANSIBLE_NET_USERNAME
           - ansible-playbook -i test.yml main.yml
+          - ansible-playbook -i test.yml testing-playbook.yml
+

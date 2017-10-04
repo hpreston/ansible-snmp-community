@@ -1,0 +1,11 @@
+- hosts: all
+  connection: local
+  gather_facts: no
+  vars_files:
+    - snmp.yml
+  tasks:
+    snmp_facts:
+    host: '{{ inventory_hostname }}'
+    version: v2c
+    community: {{ snmp_read_only }}
+  delegate_to: local
