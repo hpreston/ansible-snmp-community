@@ -1,2 +1,2 @@
 ansible
-pysnmp-4.3.9
+pysnmp
