@@ -2,7 +2,6 @@
 - name: Get current SNMP configuration
   ios_command:
     provider: "{{ cli }}"
-    port: "{{ port }}"
     commands: "show running | inc snmp-server community"
   register: snmp_before
 
@@ -10,15 +9,12 @@
   when:  item != ''
   ios_config:
     provider: "{{ cli }}"
-    port: "{{ port }}"
-
     lines: "no {{ item }}"
   with_items: "{{ snmp_before.stdout_lines[0] }}"
 
 - name: Configure SNMP
   ios_config:
     provider: "{{ cli }}"
-    port: "{{ port }}"
     lines:
       - snmp-server community {{ snmp_read_only }}
       - snmp-server community {{ snmp_read_write }}
