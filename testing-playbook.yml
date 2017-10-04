@@ -4,7 +4,7 @@
   vars_files:
     - snmp.yml
   tasks:
-    snmp_facts:
-      host: '{{ inventory_hostname }}'
-      version: v2c
-      community: "{{ snmp_read_only }}"
+    - snmp_facts:
+        host: '{{ inventory_hostname }}'
+        version: v2c
+        community: "{{ snmp_read_only }}"
