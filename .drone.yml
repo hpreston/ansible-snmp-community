@@ -1,4 +1,4 @@
-deploy:
+test:
     ansible:
         image: rics3n/drone-ansible
         inventory: test
