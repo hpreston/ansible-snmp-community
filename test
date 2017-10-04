@@ -1,3 +1,0 @@
-[all]
-test-csr1.csc.richfield.cisco.com port=22 ansible_python_interpreter="/usr/bin/env python"
-test-csr2.csc.richfield.cisco.com port=22 ansible_python_interpreter="/usr/bin/env python"

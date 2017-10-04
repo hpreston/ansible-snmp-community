@@ -1,0 +1,6 @@
+all:
+  hosts:
+    test-csr1.csc.richfield.cisco.com:
+      ansible_python_interpreter: "/usr/bin/env python"
+    test-csr1.csc.richfield.cisco.com:
+      ansible_python_interpreter: "/usr/bin/env python"
