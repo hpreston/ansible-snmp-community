@@ -75,4 +75,4 @@ lab administrator
 
 7. Monitor build status via the drone console
 
-    [http://cleur-drone.lab.apps.imapex.io](http://cleur-gogs.lab.apps.imapex.io)
+    [http://cleur-drone.lab.apps.imapex.io](http://cleur-drone.lab.apps.imapex.io)
