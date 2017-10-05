@@ -9,7 +9,5 @@
         version: v2c
         community: "{{ snmp_read_only }}"
 
-   - debug:
-       msg:
-         - "SNMP System Name: {{ ansible_facts.ansible_sysname }}"
-         - "SNMP OID: {{ ansible_facts.ansible_sysobjectid }}"         
+    - debug:
+        msg: "SNMP System Name: {{ ansible_facts.ansible_sysname }} SNMP OID: {{ ansible_facts.ansible_sysobjectid }}"
