@@ -1,2 +1,2 @@
-snmp_read_only: anotherone 
-snmp_read_write: newwrite
+snmp_read_only: SecureSNMPro
+snmp_read_write: SecureSNMPrw
