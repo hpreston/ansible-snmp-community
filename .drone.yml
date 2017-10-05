@@ -20,4 +20,4 @@ build:
       commands:
           - echo "** Running Network Tests"
           - echo "Network Username> $ANSIBLE_NET_USERNAME"
-          - ansible-playbook -v -i test.yml testing-playbook.yml
+          - ansible-playbook -i test.yml testing-playbook.yml
