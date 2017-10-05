@@ -8,6 +8,7 @@
         host: '{{ inventory_hostname }}'
         version: v2c
         community: "{{ snmp_read_only }}"
+        # register: ansible_facts
 
     - debug:
-        msg: "SNMP System Name: {{ ansible_facts.ansible_sysname }} SNMP OID: {{ ansible_facts.ansible_sysobjectid }}"
+        msg: "SNMP System Name: {{ ansible_sysname }} SNMP OID: {{ ansible_sysobjectid }}"
