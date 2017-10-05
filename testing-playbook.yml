@@ -9,5 +9,4 @@
         version: v2c
         community: "{{ snmp_read_only }}"
 
-    - debug:
-        msg: "{{ ansible_facts }}"
+    - setup:
