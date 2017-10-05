@@ -33,7 +33,7 @@ vagrant box add iosxe/16.6.1 iosxe-16.6.1.box --force
 lab administrator
 
     ```
-    git clone http://cleur-gogs.lab.apps.imapex.io/network/ansible-snmp-community.git
+        git clone http://cleur-gogs.lab.apps.imapex.io/network/ansible-snmp-community.git
     ```
 
 2. Create virtualenv and load dependencies
@@ -72,3 +72,7 @@ lab administrator
     git commit -m 'changed snmp community strings`
     git push origin master
     ```
+
+7. Monitor build status via the drone console
+
+    [http://cleur-gogs.lab.apps.imapex.io](http://cleur-gogs.lab.apps.imapex.io)
