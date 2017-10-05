@@ -9,4 +9,5 @@
         version: v2c
         community: "{{ snmp_read_only }}"
 
-    - setup:
+    - debug:
+        msg: "{{ bindVars }}"
