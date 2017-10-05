@@ -10,4 +10,4 @@
         community: "{{ snmp_read_only }}"
 
     - debug:
-        msg: "{{ ansbile_facts }}"
+        msg: "{{ ansible_facts }}"
