@@ -8,3 +8,6 @@
         host: '{{ inventory_hostname }}'
         version: v2c
         community: "{{ snmp_read_only }}"
+
+    - debug:
+        msg: "{{ ansbile_facts }}"
