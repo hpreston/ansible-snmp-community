@@ -2,14 +2,14 @@ build:
   build_starting:
       image: python:2
       commands:
-          - echo "** Beginning new build"
+          - echo "\n\n** Beginning new build\n\n"
   deploy_to_test:
       image: hpreston/drone-ansible-netdevops
       environment:
             - ANSIBLE_NET_USERNAME=$$ANSIBLE_NET_USERNAME
             - ANSIBLE_NET_PASSWORD=$$ANSIBLE_NET_PASSWORD
       commands:
-          - echo "** Deploying Config to test"
+          - echo "\n\n** Deploying Config to test\n\n"
           - echo "Network Username> $ANSIBLE_NET_USERNAME"
           - ansible-playbook -i test.yml main.yml
   test_new_strings:
@@ -18,6 +18,6 @@ build:
             - ANSIBLE_NET_USERNAME=$$ANSIBLE_NET_USERNAME
             - ANSIBLE_NET_PASSWORD=$$ANSIBLE_NET_PASSWORD
       commands:
-          - echo "** Running Network Tests"
+          - echo "\n\n** Running Network Tests\n\n"
           - echo "Network Username> $ANSIBLE_NET_USERNAME"
           - ansible-playbook -i test.yml testing-playbook.yml
