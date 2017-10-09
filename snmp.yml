@@ -1,2 +1,2 @@
-snmp_read_only: SecureSNMPro
-snmp_read_write: SecureSNMPrw
+snmp_read_only: SecureSNMProHank
+snmp_read_write: SecureSNMPrwHank
