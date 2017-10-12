@@ -1,2 +1,2 @@
-snmp_read_only: bobssnmpro
-snmp_read_write: bobssnmprw
+snmp_read_only: gotsnmpro
+snmp_read_write: gotsnmprw
